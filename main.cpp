@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
     int choice;
+    char ch;
     float a,b,c,temp,r,area,circum,s1,s2,s3,semi,areatriangle,largest,secondlargest,smallest;
     float const pi=3.14;
     cout<<"1-Replace variable with using third variable"<<endl;
@@ -13,6 +14,7 @@ int main()
     cout<<"3-Find Area and circumference of a circle"<<endl;
     cout<<"4-Find Area of triangle"<<endl;
     cout<<"5-Find largest, smallest and second largest of three numbers"<<endl;
+    cout<<"6-Find whether character is small or big alphabet"<<endl;
     cin>>choice;
     switch (choice)
     {
@@ -75,6 +77,18 @@ int main()
         cout<<"Second largest is = "<<secondlargest<<endl;
         cout<<"Largest = "<<largest<<endl;
         break;
+
+    case 6:
+        cout<<"Enter the character"<<endl;
+        cin>>ch;
+        if(ch>='A'&&ch<='Z')
+        cout<<""<<ch<<" Is a capital alphabet"<<endl;
+        else if(ch>='a'&&ch<='z')
+        cout<<""<<ch<<" Is a small alphabet"<<endl;
+        else
+        cout<<"Invalid Alphabet"<<endl;
+        break;
+
     default:cout<<"Can't You Read?";
     }
 return 0;
