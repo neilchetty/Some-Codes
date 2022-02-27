@@ -5,6 +5,11 @@
 using namespace std;
 int main()
 {
+    cout<<"*********************************************"<<endl;
+    cout<<"MADE BY NEIL\nhttps://github.com/neilchetty\nhttps://t.me/neilchetty"<<endl;
+    cout<<"SOURCE: https://github.com/neilchetty/Some-Codes"<<endl;
+    cout<<"**********************************************"<<endl;
+
     int choice,score,rem,su=0,x,fact=1,i,no,no1,sum,p,q;
     int h,l;
     int LCM(int,int);
@@ -225,6 +230,10 @@ case 12:
     break;
     default:cout<<"Can't You Read? Only Give Number Specific To The Task";
     }
+    cout<<"\n*********************************************"<<endl;
+    cout<<"MADE BY NEIL\nhttps://github.com/neilchetty\nhttps://t.me/neilchetty"<<endl;
+    cout<<"SOURCE: https://github.com/neilchetty/Some-Codes"<<endl;
+    cout<<"**********************************************"<<endl;
 return 0;
 }
 
