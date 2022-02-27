@@ -5,7 +5,8 @@
 using namespace std;
 int main()
 {
-    int choice,score;
+    int choice,score,rem,su=0;
+    long num;
     char ch;
     float a,b,c,temp,r,area,circum,s1,s2,s3,semi,areatriangle,largest,secondlargest,smallest,su1,su2,su3,su4,su5,percent;
     float const pi=3.14;
@@ -16,6 +17,7 @@ int main()
     cout<<"5-Find largest, smallest and second largest of three numbers"<<endl;
     cout<<"6-Find whether character is small or big alphabet"<<endl;
     cout<<"7-Determine whether student passed or failed in exam"<<endl;
+    cout<<"8-Sum of all digits in a number"<<endl;
     cin>>choice;
     switch (choice)
     {
@@ -124,6 +126,18 @@ int main()
             cout<<"Fail"<<endl;
             break;
         }
+    break;
+
+case 8:
+    cout<<"Enter the number"<<endl;
+    cin>>num;
+    while(num>0)
+    {
+        rem=num%10;
+        su=su+rem;
+        num=num/10;
+    }
+    cout<<"Sum of digits = "<<su<<endl;
     break;
     default:cout<<"Can't You Read?";
     }
