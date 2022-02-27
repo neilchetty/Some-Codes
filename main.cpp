@@ -5,7 +5,8 @@
 using namespace std;
 int main()
 {
-    int choice,score,rem,su=0,x,fact=1,i;
+    int choice,score,rem,su=0,x,fact=1,i,no,sum;
+    int z[500];
     long num;
     char ch;
     float a,b,c,temp,r,area,circum,s1,s2,s3,semi,areatriangle,largest,secondlargest,smallest,su1,su2,su3,su4,su5,percent;
@@ -19,6 +20,7 @@ int main()
     cout<<"7-Determine whether student passed or failed in exam"<<endl;
     cout<<"8-Sum of all digits in a number"<<endl;
     cout<<"9-Factorial of a number"<<endl;
+    cout<<"10-Sum and average of n elements"<<endl;
     cin>>choice;
     switch (choice)
     {
@@ -154,6 +156,23 @@ case 9:
     fact=fact*i;
     }
     cout<<"Factorial of this number is "<<fact<<endl;
+    break;
+
+case 10:
+    cout<<"Enter the number of elements you want to add (MAX 500) "<<endl;
+    cin>>no;
+    cout<<"Enter the elements"<<endl;
+    for(i=0;i<no;i++)
+    {
+    cin>>z[i];
+    }
+    sum=0;
+    for(i=0;i<no;i++)
+    {
+    sum=sum+z[i];
+    }
+    cout<<"Sum of elements is "<<sum<<endl;
+    cout<<"Average of all elements is "<<(float)sum/no<<endl;
     break;
     default:cout<<"Can't You Read?";
     }
