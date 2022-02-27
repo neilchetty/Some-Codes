@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 {
-    int choice,score,rem,su=0;
+    int choice,score,rem,su=0,x,fact=1,i;
     long num;
     char ch;
     float a,b,c,temp,r,area,circum,s1,s2,s3,semi,areatriangle,largest,secondlargest,smallest,su1,su2,su3,su4,su5,percent;
@@ -18,6 +18,7 @@ int main()
     cout<<"6-Find whether character is small or big alphabet"<<endl;
     cout<<"7-Determine whether student passed or failed in exam"<<endl;
     cout<<"8-Sum of all digits in a number"<<endl;
+    cout<<"9-Factorial of a number"<<endl;
     cin>>choice;
     switch (choice)
     {
@@ -138,6 +139,21 @@ case 8:
         num=num/10;
     }
     cout<<"Sum of digits = "<<su<<endl;
+    break;
+
+case 9:
+    cout<<"Enter The Number "<<endl;
+    cin>>x;
+    if(x==0)
+    cout<<"Factorial of this number is 0"<<endl;
+    else if(x<0)
+    cout<<"Cant be determined "<<endl;
+    else
+    {
+    for(i=1;i<=x;i++)
+    fact=fact*i;
+    }
+    cout<<"Factorial of this number is "<<fact<<endl;
     break;
     default:cout<<"Can't You Read?";
     }
