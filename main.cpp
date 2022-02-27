@@ -5,9 +5,9 @@
 using namespace std;
 int main()
 {
-    int choice;
+    int choice,score;
     char ch;
-    float a,b,c,temp,r,area,circum,s1,s2,s3,semi,areatriangle,largest,secondlargest,smallest;
+    float a,b,c,temp,r,area,circum,s1,s2,s3,semi,areatriangle,largest,secondlargest,smallest,su1,su2,su3,su4,su5,percent;
     float const pi=3.14;
     cout<<"1-Replace variable with using third variable"<<endl;
     cout<<"2-Replace variable without using third variable"<<endl;
@@ -15,6 +15,7 @@ int main()
     cout<<"4-Find Area of triangle"<<endl;
     cout<<"5-Find largest, smallest and second largest of three numbers"<<endl;
     cout<<"6-Find whether character is small or big alphabet"<<endl;
+    cout<<"7-Determine whether student passed or failed in exam"<<endl;
     cin>>choice;
     switch (choice)
     {
@@ -89,6 +90,41 @@ int main()
         cout<<"Invalid Alphabet"<<endl;
         break;
 
+    case 7:
+        cout<<"Enter the marks of subject 1 : "<<endl;
+        cin>>su1;
+        cout<<"Enter the marks of subject 2 : "<<endl;
+        cin>>su2;
+        cout<<"Enter the marks of subject 3 : "<<endl;
+        cin>>su3;
+        cout<<"Enter the marks of subject 4 : "<<endl;
+        cin>>su4;
+        cout<<"Enter the marks of subject 5 : "<<endl;
+        cin>>su5;
+        percent=(su1+su2+su3+su4+su5)/5;
+        cout<<"Percentage = "<<percent<<endl;
+        cout<<"Result = ";
+        score=percent/10;
+        switch (score)
+        {
+        case 10:
+        case 9:
+        case 8:
+        case 7:
+        case 6:
+            cout<<"First Class"<<endl;
+            break;
+        case 5:
+            cout<<"Second Class"<<endl;
+            break;
+        case 4:
+            cout<<"Pass Class"<<endl;
+            break;
+        default:
+            cout<<"Fail"<<endl;
+            break;
+        }
+    break;
     default:cout<<"Can't You Read?";
     }
 return 0;
