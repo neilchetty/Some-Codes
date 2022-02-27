@@ -5,14 +5,15 @@
 using namespace std;
 int main()
 {
-    int choice,score,rem,su=0,x,fact=1,i,no,sum,p,q;
+    int choice,score,rem,su=0,x,fact=1,i,no,no1,sum,p,q;
     int h,l;
     int LCM(int,int);
     int HCF(int,int);
     int z[500];
+    int y[500];
     long num;
     char ch;
-    float a,b,c,temp,r,area,circum,s1,s2,s3,semi,areatriangle,largest,secondlargest,smallest,su1,su2,su3,su4,su5,percent;
+    float a,b,c,temp,r,area,circum,s1,s2,s3,semi,areatriangle,largest,secondlargest,smallest,lar,seclar,smal,su1,su2,su3,su4,su5,percent;
     float const pi=3.14;
     cout<<"1-Replace variable with using third variable"<<endl;
     cout<<"2-Replace variable without using third variable"<<endl;
@@ -25,6 +26,7 @@ int main()
     cout<<"9-Factorial of a number"<<endl;
     cout<<"10-Sum and average of n elements"<<endl;
     cout<<"11-Find HCF and LCM of two numbers"<<endl;
+    cout<<"12-Find largest, second largest, smallest number of n numbers"<<endl;
 
 
     cin>>choice;
@@ -189,7 +191,39 @@ case 11:
     cout<<"HCF of these two number are "<<h<<endl;
     cout<<"LCM of these two number are "<<l<<endl; 
     break;
-    default:cout<<"Can't You Read?";
+
+case 12:
+    cout<<"Enter the number of elements "<<endl;
+    cin>>no1;
+    cout<<"Enter the elements value "<<endl;
+    for(i=0;i<no1;i++)
+    {
+    cin>>y[i];
+    }
+    lar=y[0];
+    for(i=0;i<no1;i++)
+    {
+    if(y[i]>lar)
+    lar=y[i];
+    }
+    smal=y[0];
+    for(i=0;i<no1;i++)
+    {
+    if(y[i]<smal)
+    smal=y[i];
+    }
+    seclar=y[0];
+    for(i=0;i<no1;i++)
+    if(y[i]!=lar)
+    {
+        if(seclar<y[i])
+        seclar=y[i];
+    }
+    cout<<"Smallest number = "<<smal<<endl;
+    cout<<"Second largest number = "<<seclar<<endl;
+    cout<<"Largest number = "<<lar<<endl;
+    break;
+    default:cout<<"Can't You Read? Only Give Number Specific To The Task";
     }
 return 0;
 }
