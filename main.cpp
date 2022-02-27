@@ -5,7 +5,10 @@
 using namespace std;
 int main()
 {
-    int choice,score,rem,su=0,x,fact=1,i,no,sum;
+    int choice,score,rem,su=0,x,fact=1,i,no,sum,p,q;
+    int h,l;
+    int LCM(int,int);
+    int HCF(int,int);
     int z[500];
     long num;
     char ch;
@@ -21,6 +24,9 @@ int main()
     cout<<"8-Sum of all digits in a number"<<endl;
     cout<<"9-Factorial of a number"<<endl;
     cout<<"10-Sum and average of n elements"<<endl;
+    cout<<"11-Find HCF and LCM of two numbers"<<endl;
+
+
     cin>>choice;
     switch (choice)
     {
@@ -174,7 +180,33 @@ case 10:
     cout<<"Sum of elements is "<<sum<<endl;
     cout<<"Average of all elements is "<<(float)sum/no<<endl;
     break;
+
+case 11:
+    cout<<"Write Two Numbers "<<endl;
+    cin>>p>>q;
+    l=LCM(p,q);
+    h=HCF(p,q);
+    cout<<"HCF of these two number are "<<h<<endl;
+    cout<<"LCM of these two number are "<<l<<endl; 
+    break;
     default:cout<<"Can't You Read?";
     }
 return 0;
+}
+
+int HCF(int m,int n)
+{
+    while(m!=n)
+    if(m>n)
+    m=m-n;
+    else
+    n=n-m;
+    return (m);
+}
+int LCM(int r,int s)
+{
+    int h,l;
+    h=HCF(r,s);
+    l=(r*s)/h;
+    return (l);
 }
